@@ -1,4 +1,4 @@
-const CACHE = "neles-nugget-v1";
+const CACHE = "nugget-uffbasse-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -23,13 +23,33 @@ self.addEventListener("activate", event => {
 
 self.addEventListener("fetch", event => {
   if (event.request.method !== "GET") return;
+
+  const request = event.request;
+  const url = new URL(request.url);
+
+  // For the app itself, prefer the newest online version.
+  // If there is no connection, fall back to the cached offline copy.
+  if (request.mode === "navigate" || url.pathname.endsWith("/index.html") || url.pathname.endsWith("/manifest.webmanifest")) {
+    event.respondWith(
+      fetch(request)
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE).then(cache => cache.put(request, copy));
+          return response;
+        })
+        .catch(() => caches.match(request).then(cached => cached || caches.match("./index.html")))
+    );
+    return;
+  }
+
+  // Static assets: fast cache first, network fallback.
   event.respondWith(
-    caches.match(event.request).then(cached => {
-      return cached || fetch(event.request).then(response => {
+    caches.match(request).then(cached =>
+      cached || fetch(request).then(response => {
         const copy = response.clone();
-        caches.open(CACHE).then(cache => cache.put(event.request, copy));
+        caches.open(CACHE).then(cache => cache.put(request, copy));
         return response;
-      }).catch(() => caches.match("./index.html"));
-    })
+      })
+    )
   );
 });
