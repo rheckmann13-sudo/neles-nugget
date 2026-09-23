@@ -1,10 +1,11 @@
-const CACHE = "nugget-uffbasse-v6";
+const CACHE = "nugget-uffbasse-v7";
 const ASSETS = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
   "./icon-192.png",
-  "./icon-512.png"
+  "./icon-512.png",
+  "./nugget-start.jpg"
 ];
 
 self.addEventListener("install", event => {
