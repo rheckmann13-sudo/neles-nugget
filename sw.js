@@ -1,4 +1,4 @@
-const CACHE = "nugget-uffbasse-v17";
+const CACHE = "nugget-uffbasse-v18";
 const ASSETS = [
   "./",
   "./index.html",
@@ -34,7 +34,7 @@ self.addEventListener("fetch", event => {
   // If there is no connection, fall back to the cached offline copy.
   if (request.mode === "navigate" || url.pathname.endsWith("/index.html") || url.pathname.endsWith("/manifest.webmanifest")) {
     event.respondWith(
-      fetch(request)
+      fetch(request, {cache: "no-store"})
         .then(response => {
           const copy = response.clone();
           caches.open(CACHE).then(cache => cache.put(request, copy));
