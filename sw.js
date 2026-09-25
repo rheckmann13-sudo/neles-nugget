@@ -1,4 +1,4 @@
-const CACHE = "nugget-uffbasse-v18";
+const CACHE = "nugget-uffbasse-v19";
 const ASSETS = [
   "./",
   "./index.html",
@@ -55,4 +55,8 @@ self.addEventListener("fetch", event => {
       })
     )
   );
+});
+
+self.addEventListener("message", event => {
+  if (event.data && event.data.type === "SKIP_WAITING") self.skipWaiting();
 });
