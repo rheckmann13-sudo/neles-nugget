@@ -1,4 +1,4 @@
-const CACHE = "nugget-uffbasse-v12";
+const CACHE = "nugget-uffbasse-v13";
 const ASSETS = [
   "./",
   "./index.html",
