@@ -153,6 +153,21 @@ body:has(#home:target) .bottom,body:not(:has(.screen:target)) .bottom{display:no
 
 <section id="abfahrt" class="screen"><div class="top"><a href="#unterwegs">‹</a><b>Unterwegs</b></div><div class="content"><h1>Losfahren</h1><p class="lead">Ein Check – dann kann es losgehen.</p><div class="row"><div><b>□ Gas-Absperrventil schließen</b></div></div><div class="row"><div><b>□ Aufstelldach vollständig schließen</b></div></div><div class="row"><div><b>□ Markise einfahren und Stützen verstauen</b></div></div><div class="row"><div><b>□ Schränke, Schubladen und Kühlschublade verriegeln</b></div></div><div class="row"><div><b>□ 230-V-Landstrom trennen und Kabel verstauen</b></div></div><div class="row"><div><b>□ Frischwasser für Fahrt auf max. 10 l reduzieren</b></div></div><div class="row"><div><b>□ Abwassertank möglichst entleeren</b></div></div><div class="row"><div><b>□ Lose Gegenstände sichern; Fahrradträger/Befestigungen prüfen</b></div></div></div></section>
 
-<section id="abenteuer" class="screen"><div class="top"><a href="#home">‹</a><b>UFFBASSE</b></div><div class="content"><h1>Abenteuer</h1><p class="lead">Unsere Reisen, Fotos und Erinnerungen.</p><a class="primary" href="#">＋ Neues Abenteuer</a><div class="gallery"><div class="photo"><img src="nugget-start-v2.jpg"><div><b>Unsere Abenteuer</b><small>Cloud-Galerie</small></div></div><div class="photo"><img src="nugget-start-v2.jpg"><div><b>Reiseübersicht</b><small>Gemeinsam unterwegs</small></div></div></div></div></section>
+<section id="abenteuer" class="screen"><div class="top"><a href="#home">‹</a><b>UFFBASSE</b></div><div class="content"><h1>Abenteuer</h1><p class="lead">Unsere Reisen, Fotos und Erinnerungen.</p>
+<a class="primary" href="#abenteuer-neu">＋ Neues Abenteuer</a>
+<a class="row" href="#abenteuer-cloud"><div><b>Unsere Abenteuer</b><small>Gemeinsame Cloud-Galerie</small></div><span class="chev">›</span></a>
+<div class="row"><div><b>Speicherung</b><small>Bei aktiver Cloud-Anmeldung werden neue Abenteuer in der Nugget Cloud gespeichert und zusätzlich lokal auf diesem Gerät gesichert.</small></div></div></div></section>
+
+<section id="abenteuer-neu" class="screen"><div class="top"><a href="#abenteuer">‹</a><b>Abenteuer</b></div><div class="content"><h1>Neues Abenteuer</h1><p class="lead">Fotos und Erinnerung festhalten.</p>
+<div class="row"><div><b>1 · Fotos</b><small>Bis zu 5 Fotos aus der Mediathek auswählen.</small></div></div>
+<div class="row"><div><b>2 · Ort oder Titel</b><small>Zum Beispiel „Bretagne“.</small></div></div>
+<div class="row"><div><b>3 · Datum</b><small>Reisedatum auswählen.</small></div></div>
+<div class="row"><div><b>4 · Notiz</b><small>Eine kleine Erinnerung ergänzen.</small></div></div>
+<div class="notice"><b>Prototyp:</b> Das bestehende Speicherformular und die Cloud-Funktionen werden bei der späteren Produktionsmigration unverändert angebunden. In dieser Testseite werden keine echten Abenteuer gespeichert.</div></div></section>
+
+<section id="abenteuer-cloud" class="screen"><div class="top"><a href="#abenteuer">‹</a><b>Abenteuer</b></div><div class="content"><h1>Unsere Abenteuer</h1><p class="lead">Gemeinsame Nugget Cloud.</p>
+<div class="row"><div><b>Nugget Cloud</b><small>Familien-Zugang · gemeinsame Galerie · vorhandene Reisen bleiben erhalten.</small></div></div>
+<div class="row"><div><b>Cloud-Galerie aktualisieren</b><small>Vorhandene Abenteuer aus der Cloud neu laden.</small></div></div>
+<div class="notice"><b>Prototyp:</b> Die produktive Cloud-Galerie und die bestehenden Supabase-Daten werden hier bewusst nicht verändert. Die echte Galerie wird erst beim freigegebenen Wechsel auf 3.0 eingebunden.</div></div></section>
 
 <div class="bottom"><a href="#home">⌂<br>Start</a><a href="#unterwegs">▱<br>Unterwegs</a><a href="#platz">⌂<br>Am Platz</a><a href="#sos">＋<br>Notfall</a><a href="#abenteuer">△<br>Abenteuer</a></div></main></body></html>
