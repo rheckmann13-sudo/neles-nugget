@@ -91,17 +91,65 @@ body:has(#home:target) .bottom,body:not(:has(.screen:target)) .bottom{display:no
 <div class="row"><div><b>PeggyPeg</b><small>Lange Schrauben · Schlüsselweite 13 · passende Nüsse für Schlagschrauber in grauer Werkzeugkiste, hinterer Schrank, unterstes Fach.</small></div></div></div></section>
 
 <section id="sos" class="screen"><div class="top"><a href="#home">‹</a><b>UFFBASSE</b></div><div class="content"><h1>Notfall & SOS</h1><p class="lead">Was ist passiert?</p><div class="sosgrid">
-<div class="sos"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg><b>Medizinischer Notfall</b></div><div class="sos"><svg viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3zM12 9v5M12 17h.01"/></svg><b>Unfall</b></div>
-<div class="sos"><b>Panne / Fahrzeug</b></div><a class="sos" href="#kein-strom"><svg viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 9-13h-6z"/></svg><b>Kein Strom</b></a>
-<div class="sos"><b>Batterie</b></div><div class="sos"><b>Wasser</b></div><div class="sos"><b>Gas / Kocher</b></div><a class="sos" href="#hilfe"><b>Hilfe anrufen</b></a></div></div></section>
+<a class="sos" href="#medizin"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg><b>Medizinischer Notfall</b></a>
+<a class="sos" href="#panne"><b>Panne / Fahrzeug</b></a>
+<a class="sos" href="#kein-strom"><svg viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 9-13h-6z"/></svg><b>Kein Strom</b></a>
+<a class="sos" href="#batterie-sos"><b>Batterie</b></a>
+<a class="sos" href="#wasser-sos"><b>Wasser läuft nicht</b></a>
+<a class="sos" href="#gas-sos"><b>Gas / Kocher</b></a>
+<a class="sos" href="#dach-sos"><b>Dach geht nicht zu</b></a>
+<a class="sos" href="#markise-sos"><b>Markise klemmt</b></a>
+<a class="sos" href="#feuer"><b>Feuer</b></a>
+<a class="sos" href="#alarm-sos"><b>Alarm ausgelöst</b></a>
+<a class="sos" href="#hilfe"><b>Hilfe anrufen</b></a></div></div></section>
 
-<section id="kein-strom" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Kein Strom</h1><p class="lead">Schritt für Schritt zur Lösung.</p><div class="notice">⚡ Schnellprüfung – von außen nach innen.</div>
-<div class="step"><span class="num">1</span><div><b>Stromkasten prüfen</b><p>Hat der Stromkasten des Campingplatzes Strom? Testgerät an der äußeren 220-V-Steckdose des orangen Kabels auf der Camperseite prüfen.</p></div></div>
+<section id="medizin" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Medizinischer Notfall</h1><p class="lead">Krank oder verletzt im Ausland.</p>
+<div class="notice"><b>Bei unmittelbarer Lebensgefahr:</b> zuerst den örtlichen Notruf wählen.</div>
+<div class="row"><div><b>Unser Schutz</b><small>ADAC Auslandskrankenschutz Premium · Familienvertrag</small></div></div>
+<a class="row" href="tel:+4989767676"><div><b>ADAC Ambulanz-Service 24/7</b><small>+49 89 76 76 76</small></div><span>☎</span></a>
+<a class="row" href="tel:+4989767677"><div><b>ADAC Reisemedizin</b><small>+49 89 76 76 77</small></div><span>☎</span></a>
+<div class="notice"><b>Schwere Erkrankung, Unfall, stationäre Aufnahme oder geplanter Krankenrücktransport:</b> möglichst früh den ADAC Ambulanz-Service kontaktieren.</div></div></section>
+
+<section id="panne" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Panne / Fahrzeug</h1><p class="lead">Fahrzeug zuerst sichern.</p>
+<div class="step"><span class="num">1</span><div><b>Fahrzeug sichern</b></div></div><div class="step"><span class="num">2</span><div><b>Warnblinker an</b></div></div><div class="step"><span class="num">3</span><div><b>Bei Bedarf Pannenhilfe rufen</b></div></div>
+<a class="primary" href="#hilfe">Hilfe anrufen</a></div></section>
+
+<section id="kein-strom" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Kein Strom</h1><p class="lead">Schritt für Schritt zur Lösung.</p><div class="notice">Schnellprüfung – von außen nach innen.</div>
+<div class="step"><span class="num">1</span><div><b>Stromkasten prüfen</b><p>Hat der Stromkasten des Campingplatzes Strom? Testgerät an der äußeren 220-V-Steckdose des orangen Kabels auf der Camperseite (schwarze Klappe) prüfen.</p></div></div>
 <div class="step"><span class="num">2</span><div><b>Kabel prüfen</b><p>Kabelweg bis zum Stromkasten kontrollieren und ggf. eine andere Dose benutzen.</p></div></div>
 <div class="step"><span class="num">3</span><div><b>FI-Schalter prüfen</b><p>Sitzbank nach vorne ziehen. FI rechts an der Camperwand prüfen und ggf. wieder einschalten.</p></div></div>
 <div class="step"><span class="num">4</span><div><b>Erneut testen</b><p>Prüfen, ob 230-V-Strom im Nugget wieder verfügbar ist.</p></div></div><a class="primary" href="#hilfe">Problem bleibt? → Hilfe anrufen</a></div></section>
 
-<section id="hilfe" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Hilfe anrufen</h1><p class="lead">Alle wichtigen Kontakte an einem Ort.</p><a class="row" href="tel:112"><div><b>Notruf Europa</b><small>112</small></div><span>☎</span></a><a class="row" href="tel:+4989767676"><div><b>ADAC Ambulanz-Service</b><small>+49 89 76 76 76</small></div><span>☎</span></a><div class="row"><div><b>ADAC Pannenhilfe</b><small>Pannenhilfe öffnen / anrufen</small></div><span>›</span></div><a class="row" href="tel:+49620199410"><div><b>Ford Knapp</b><small>+49 6201 9941-0</small></div><span>☎</span></a></div></section>
+<section id="batterie-sos" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Batterie</h1><p class="lead">Was zuerst prüfen?</p>
+<div class="step"><span class="num">1</span><div><b>Bei Landstrom</b><p>Sitzt der CEE-Stecker?</p></div></div><div class="step"><span class="num">2</span><div><b>FI/RCD prüfen</b></div></div><div class="step"><span class="num">3</span><div><b>Batteriestand prüfen</b><p>In Camper Control prüfen.</p></div></div><div class="step"><span class="num">4</span><div><b>Bei sehr niedrigem Stand</b><p>230 V anschließen und laden.</p></div></div>
+<div class="notice">Die Ausgangsunterlagen enthalten keine vollständige Fehlerdiagnose für einzelne Verbraucher.</div></div></section>
+
+<section id="wasser-sos" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Wasser läuft nicht</h1>
+<div class="step"><span class="num">1</span><div><b>Frischwasser im Tank?</b></div></div><div class="step"><span class="num">2</span><div><b>Entleerungshähne geschlossen?</b></div></div><div class="step"><span class="num">3</span><div><b>Camper Control / Wassersystem prüfen</b></div></div>
+<div class="notice">Wenn weiterhin kein Wasser kommt: Anleitung öffnen; keine nicht dokumentierten Ventile oder Pumpen zerlegen.</div></div></section>
+
+<section id="gas-sos" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Gas / Kocher</h1><p class="lead">Kocher funktioniert nicht.</p>
+<div class="step"><span class="num">1</span><div><b>Nur im Stand prüfen</b><p>Für gute Lüftung sorgen.</p></div></div><div class="step"><span class="num">2</span><div><b>Gasventil öffnen</b><p>Für den Betrieb öffnen.</p></div></div><div class="step"><span class="num">3</span><div><b>Zünden</b><p>Regler drücken/drehen, Piezo-Zünder betätigen und nach Zündung ca. 15 s gedrückt halten.</p></div></div><div class="step"><span class="num">4</span><div><b>Funktioniert es nicht?</b><p>Gas wieder schließen und Anleitung verwenden.</p></div></div></div></section>
+
+<section id="dach-sos" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Dach geht nicht sauber zu</h1>
+<div class="notice"><b>Nicht mit Gewalt ziehen.</b></div>
+<div class="step"><span class="num">1</span><div><b>Druckausgleich</b><p>Tür, Fenster oder Heckklappe öffnen.</p></div></div><div class="step"><span class="num">2</span><div><b>Dachfenster und Bettrahmen</b><p>Dachfenster schließen und Bettrahmen absenken.</p></div></div><div class="step"><span class="num">3</span><div><b>Gasdruckfeder / Faltenbalg</b><p>Rechte Gasdruckfeder entriegeln und Faltenbalg nach innen führen.</p></div></div><div class="step"><span class="num">4</span><div><b>Vor Verriegelung</b><p>Rundum auf eingeklemmten Stoff prüfen.</p></div></div></div></section>
+
+<section id="markise-sos" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Markise klemmt</h1>
+<div class="notice"><b>Nicht mit Gewalt kurbeln.</b></div><div class="step"><span class="num">1</span><div><b>Stützen und Spannung prüfen</b></div></div><div class="step"><span class="num">2</span><div><b>Beim Einfahren</b><p>Erst bis ca. 1 m ans Fahrzeug, dann Stützen einklappen und vollständig einfahren.</p></div></div></div></section>
+
+<section id="feuer" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Feuer</h1>
+<div class="step"><span class="num">1</span><div><b>Gas schließen</b></div></div><div class="step"><span class="num">2</span><div><b>230-V-Netz trennen</b></div></div><div class="step"><span class="num">3</span><div><b>Alarmieren / Feuerwehr rufen</b></div></div><div class="notice"><b>Nur löschen, wenn dies ohne eigenes Risiko möglich ist.</b></div></div></section>
+
+<section id="alarm-sos" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Alarm ausgelöst</h1><div class="notice"><b>Alarm stoppen:</b> Wenn der Alarm auslöst, kannst du ihn mit einem Tastendruck auf der Fernbedienung stoppen.</div></div></section>
+
+<section id="hilfe" class="screen"><div class="top"><a href="#sos">‹</a><b>Notfall & SOS</b></div><div class="content"><h1>Hilfe anrufen</h1><p class="lead">Alle wichtigen Kontakte an einem Ort.</p>
+<a class="row" href="tel:112"><div><b>Notruf Europa</b><small>112</small></div><span>☎</span></a>
+<a class="row" href="tel:+4989767676"><div><b>ADAC Ambulanz-Service 24/7</b><small>+49 89 76 76 76</small></div><span>☎</span></a>
+<a class="row" href="tel:+4989767677"><div><b>ADAC Reisemedizin</b><small>+49 89 76 76 77</small></div><span>☎</span></a>
+<a class="row" href="tel:+498976766632"><div><b>ADAC Vertragsservice</b><small>+49 89 76 76 66 32</small></div><span>☎</span></a>
+<div class="row"><div><b>ADAC Pannenhilfe</b><small>Pannenhilfe online öffnen / anrufen</small></div><span>›</span></div>
+<a class="row" href="tel:+49620199410"><div><b>Ford Knapp Unfall-Soforthilfe 24h</b><small>+49 6201 9941-0</small></div><span>☎</span></a></div></section>
 
 <section id="abfahrt" class="screen"><div class="top"><a href="#unterwegs">‹</a><b>Unterwegs</b></div><div class="content"><h1>Losfahren</h1><p class="lead">Ein Check – dann kann es losgehen.</p><div class="row"><div><b>□ Gas-Absperrventil schließen</b></div></div><div class="row"><div><b>□ Aufstelldach vollständig schließen</b></div></div><div class="row"><div><b>□ Markise einfahren und Stützen verstauen</b></div></div><div class="row"><div><b>□ Schränke, Schubladen und Kühlschublade verriegeln</b></div></div><div class="row"><div><b>□ 230-V-Landstrom trennen und Kabel verstauen</b></div></div><div class="row"><div><b>□ Frischwasser für Fahrt auf max. 10 l reduzieren</b></div></div><div class="row"><div><b>□ Abwassertank möglichst entleeren</b></div></div><div class="row"><div><b>□ Lose Gegenstände sichern; Fahrradträger/Befestigungen prüfen</b></div></div></div></section>
 
