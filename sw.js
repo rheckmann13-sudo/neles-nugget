@@ -1,4 +1,4 @@
-const CACHE = "nugget-uffbasse-v45";
+const CACHE = "nugget-uffbasse-v46";
 const ASSETS = [
   "./",
   "./index.html",
@@ -29,6 +29,10 @@ self.addEventListener("fetch", event => {
 
   const request = event.request;
   const url = new URL(request.url);
+
+  // Cloud APIs must never use the offline asset cache.
+  // Previously, Supabase GET responses were cached indefinitely.
+  if (url.origin !== self.location.origin) return;
 
   // For the app itself, prefer the newest online version.
   // If there is no connection, fall back to the cached offline copy.
