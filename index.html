@@ -31,7 +31,24 @@ body:has(#home:target) .bottom,body:not(:has(.screen:target)) .bottom{display:no
 #abenteuer .nugget-sound-art{position:relative;z-index:1;width:56px;flex-basis:56px;height:56px;border-radius:12px}
 #abenteuer .nugget-sound-art img{width:46px;height:46px}
 @media(max-width:390px){#abenteuer .nugget-sound-launcher{padding-right:28%;gap:8px}#abenteuer .nugget-sound-launcher::after{width:32%}}
-</style></head><body><div class="proto">4.5 · CRAZY FAMILY</div><main>
+</style><style>
+/* UFFBASSE 4.6: Alles an Bord? */
+.check-tabs{display:flex;gap:5px;margin:15px 0 17px;padding:4px;background:#eaf1f8;border-radius:14px}
+.check-tab{flex:1;min-width:0;border:0;border-radius:11px;background:transparent;color:#17466f;padding:11px 4px;font:600 13px inherit;cursor:pointer}
+.check-tab.active{background:#123f70;color:white;box-shadow:0 2px 5px #123f7020}
+.check-progress{margin:10px 0 17px;color:#123f70;font-weight:700}
+.check-meter{height:9px;background:#e3edf5;border-radius:99px;overflow:hidden;margin-top:8px}
+#checkMeterFill{height:100%;width:0;background:#3e8b76;border-radius:99px;transition:width .2s}
+.check-items{display:grid;gap:9px}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:14px 12px;border:1px solid #d7e5f0;background:#fff;border-radius:13px;cursor:pointer;line-height:1.4;color:#173e60}
+.check-item input{width:22px;height:22px;flex:0 0 22px;margin:0;accent-color:#236c8e}
+.check-item span{flex:1}
+.check-item:has(input:checked){background:#f0f8f5;border-color:#a9d4c5}
+.check-item input:checked+span{text-decoration:line-through;color:#657b7e}
+.check-complete{margin:16px 0;padding:14px;background:#edf8f1;color:#206b4e;border-radius:12px;font-weight:700}
+.check-reset{margin-top:18px;width:100%;padding:13px;border-radius:12px;border:1px solid #bdd0e0;background:white;color:#123f70;font:600 14px inherit;cursor:pointer}
+.check-hint{font-size:12px;line-height:1.5;color:#6b7d8d;margin:13px 0}
+</style></head><body><div class="proto">4.6 · ALLES AN BORD</div><main>
 <section id="home" class="screen"><div class="hero"><img src="crazy-family-nugget.png" onerror="this.onerror=null;this.src='nugget-start-v2.jpg'" alt="Crazy Family unterwegs mit unserem Ford Nugget V710"><div class="brand"><strong>UFFBASSE</strong><span>unser Nugget</span><small>REISEN · ENTDECKEN · GEMEINSAM ERLEBEN</small></div></div><div class="homegrid">
 <a class="tile" href="#unterwegs"><svg viewBox="0 0 24 24"><path d="M3 15h18M5 15l2-6h10l2 6M7 18h.01M17 18h.01M6 15v3h12v-3"/></svg><b>UNTERWEGS</b><small>Fahrt, Fahrzeug, Navigation, Tanken, Parken · Wo isser denn, der Nugget?</small></a>
 <a class="tile" href="#platz"><svg viewBox="0 0 24 24"><path d="M3 17h18M5 17V9h9l4 3v5M8 9V6h6v3M18 12h3v5"/></svg><b>AM PLATZ</b><small>Strom, Wasser, Gas, Dach, Markise</small></a>
@@ -177,7 +194,7 @@ body:has(#home:target) .bottom,body:not(:has(.screen:target)) .bottom{display:no
 <a class="row" href="tel:+4989222222"><div><b>ADAC Pannenhilfe Ausland</b><small>+49 89 22 22 22</small></div><span>☎</span></a>\n<a class="row" href="tel:+498920204000"><div><b>ADAC Pannenhilfe Deutschland</b><small>089 20 20 40 00 · mobil 22 22 22</small></div><span>☎</span></a>
 <a class="row" href="tel:+49620199410"><div><b>Ford Knapp Unfall-Soforthilfe 24h</b><small>+49 6201 9941-0</small></div><span>☎</span></a></div></section>
 
-<section id="abfahrt" class="screen"><div class="top"><a href="javascript:history.back()" aria-label="Zurück">‹</a><b>Abfahrtscheck</b></div><div class="content"><h1>Losfahren</h1><p class="lead">Ein Check – dann kann es losgehen.</p><div class="row"><div><b>□ Gas-Absperrventil schließen</b></div></div><div class="row"><div><b>□ Aufstelldach vollständig schließen</b></div></div><div class="row"><div><b>□ Markise einfahren und Stützen verstauen</b></div></div><div class="row"><div><b>□ Schränke, Schubladen und Kühlschublade verriegeln</b></div></div><div class="row"><div><b>□ 230-V-Landstrom trennen und Kabel verstauen</b></div></div><div class="row"><div><b>□ Frischwasser für Fahrt auf max. 10 l reduzieren</b></div></div><div class="row"><div><b>□ Abwassertank möglichst entleeren</b></div></div><div class="row"><div><b>□ Lose Gegenstände sichern; Fahrradträger/Befestigungen prüfen</b></div></div></div></section>
+<section id="abfahrt" class="screen"><div class="top"><a href="#unterwegs" aria-label="Zurück">‹</a><b>Alles an Bord?</b></div><div class="content"><h1>Alles an Bord?</h1><p class="lead">Kurz prüfen, abhaken und entspannt losfahren.</p><div class="check-tabs" role="tablist" aria-label="Checkliste"><button type="button" class="check-tab active" data-check-tab="start" aria-selected="true">Abfahrt</button><button type="button" class="check-tab" data-check-tab="platz" aria-selected="false">Am Platz</button><button type="button" class="check-tab" data-check-tab="heim" aria-selected="false">Heimfahrt</button></div><div class="check-progress"><div id="checkProgressText" role="status">0 von 0 erledigt</div><div class="check-meter"><div id="checkMeterFill"></div></div></div><div id="checkItems" class="check-items"></div><div id="checkComplete" class="check-complete" hidden>✓ Alles erledigt – gute Fahrt!</div><button type="button" id="checkReset" class="check-reset">Diese Liste zurücksetzen</button><p class="check-hint">Die Häkchen bleiben auf diesem Gerät gespeichert. Vor der Fahrt immer auch die fahrzeugspezifischen Hinweise beachten.</p></div></section>
 
 <section id="abenteuer" class="screen"><div class="top"><a href="#home">‹</a><b>UFFBASSE</b></div><div class="content"><h1>Abenteuer</h1><p class="lead">Unsere Reisen, Fotos und Erinnerungen.</p><a class="primary" href="#abenteuer-neu">＋ Neues Abenteuer</a><a class="row" href="#abenteuer-cloud"><div><b>Unsere Abenteuer</b><small>Gemeinsame Cloud-Galerie</small></div><span class="chev">›</span></a><a class="row nugget-sound-launcher" href="https://open.spotify.com/playlist/32GpSx0QlCla8yab7VwMQE" target="_blank" rel="noopener"><div class="nugget-sound-art"><img src="./icon-192.png" alt=""></div><div><b>Nugget Sound</b><small>Unser Soundtrack für unterwegs · Spotify</small><small><b>Playlist starten ›</b></small></div></a></div></section>
 <section id="abenteuer-neu" class="screen"><div class="top"><a href="#abenteuer">‹</a><b>Abenteuer</b></div><div class="content"><h1>Neues Abenteuer</h1><p class="lead">Bis zu 5 Fotos und eine Erinnerung festhalten.</p><form id="adventureForm" class="adventure-form"><label class="adventure-upload">Fotos aus Mediathek auswählen<input id="adventurePhoto" type="file" accept="image/*" multiple required></label><input id="adventureTitle" type="text" maxlength="80" placeholder="Ort oder Titel, z. B. Bretagne" required><input id="adventureDate" type="date"><textarea id="adventureNote" maxlength="500" placeholder="Eine kleine Erinnerung …"></textarea><button class="adventure-save" type="submit">Abenteuer speichern</button></form><p id="adventureStatus" class="local-note" aria-live="polite"></p></div></section>
@@ -313,4 +330,26 @@ $("invSave").addEventListener("click",()=>{const name=$("invName").value.trim();
   const link=document.createElement("a");link.href=url;link.download="Uffbasse_Inventar_"+new Date().toISOString().slice(0,10)+".pdf";document.body.append(link);link.click();link.remove();
   setTimeout(()=>URL.revokeObjectURL(url),120000);btn.textContent="PDF erneut speichern";
  }catch(e){alert("PDF-Erstellung fehlgeschlagen: "+e.message)}
-};document.getElementById("invPrintClose").onclick=()=>{document.getElementById("invPrintPage").style.display="none";document.getElementById("invPrintActions").style.display="none";document.getElementById("invList").scrollIntoView({behavior:"smooth",block:"start"})};})();</script></body></html>
+};document.getElementById("invPrintClose").onclick=()=>{document.getElementById("invPrintPage").style.display="none";document.getElementById("invPrintActions").style.display="none";document.getElementById("invList").scrollIntoView({behavior:"smooth",block:"start"})};})();</script><script>
+(function(){
+const groups={
+ start:["Gasversorgung für die Fahrt gemäß Fahrzeugausstattung sichern","Aufstelldach vollständig schließen und Verriegelung prüfen","Markise vollständig einfahren, Stützen und Kurbel verstauen","Fenster, Dachhauben und Türen schließen","Schränke, Schubladen und Kühlschublade sichern","230-V-Landstrom trennen, CEE-Kabel verstauen","Wasser- und Abwasserstand für die Fahrt prüfen","Lose Gegenstände, Tisch und Campingmöbel sichern","Fahrräder, Träger und Außenanbauten kontrollieren","Rundgang ums Fahrzeug; Personen angeschnallt"],
+ platz:["Standplatz und Fahrzeugneigung prüfen","Feststellbremse betätigen und Fahrzeug sichern","Bei Bedarf Landstrom fachgerecht anschließen","Wasserversorgung und Füllstand prüfen","Aufstelldach nur bei geeigneten Bedingungen öffnen","Markise bei Bedarf aufbauen und gegen Wind sichern","Stühle, Tisch und Zubehör sicher aufstellen"],
+ heim:["Persönliche Gegenstände und Dokumente vollständig einpacken","Schränke, Schubladen und Kühlschublade sichern","Landstrom trennen und Kabel verstauen","Aufstelldach und Markise vollständig schließen","Wasser und Abwasser nach Bedarf entsorgen","Campingmöbel und lose Gegenstände sichern","Stellplatz sauber hinterlassen und Rundgang durchführen"]
+};
+const root=document.getElementById("abfahrt");if(!root)return;
+const list=root.querySelector("#checkItems"),txt=root.querySelector("#checkProgressText"),bar=root.querySelector("#checkMeterFill"),done=root.querySelector("#checkComplete");
+let tab="start";const key=t=>"uffbasse-check-v1-"+t;
+function get(t){try{const x=JSON.parse(localStorage.getItem(key(t))||"[]");return Array.isArray(x)?x:[]}catch(e){return []}}
+function save(t,a){try{localStorage.setItem(key(t),JSON.stringify(a))}catch(e){}}
+function render(){
+ root.querySelectorAll("[data-check-tab]").forEach(b=>{const active=b.dataset.checkTab===tab;b.classList.toggle("active",active);b.setAttribute("aria-selected",String(active))});
+ const checked=get(tab),items=groups[tab];list.replaceChildren();
+ items.forEach((name,i)=>{const label=document.createElement("label");label.className="check-item";const input=document.createElement("input");input.type="checkbox";input.checked=checked.includes(i);const span=document.createElement("span");span.textContent=name;input.addEventListener("change",()=>{const a=get(tab).filter(n=>n!==i);if(input.checked)a.push(i);save(tab,a);render()});label.append(input,span);list.append(label)});
+ const n=items.filter((_,i)=>checked.includes(i)).length;txt.textContent=n+" von "+items.length+" erledigt";bar.style.width=(n/items.length*100)+"%";done.hidden=n!==items.length;done.textContent=tab==="platz"?"✓ Alles vorbereitet – schönen Aufenthalt!":"✓ Alles erledigt – gute Fahrt!";
+}
+root.querySelectorAll("[data-check-tab]").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.checkTab;render()}));
+root.querySelector("#checkReset").addEventListener("click",()=>{if(confirm("Häkchen dieser Liste zurücksetzen?")){save(tab,[]);render()}});
+render();
+})();
+</script></body></html>
