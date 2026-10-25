@@ -21,7 +21,17 @@ body:has(#home:target) .bottom,body:not(:has(.screen:target)) .bottom{display:no
 #abenteuer .nugget-sound-art{background:#e8f2fa}
 #wo3 #invSearch{border-radius:15px;border:1px solid #bfd2e4}
 @media(max-width:370px){#abenteuer .content::before,#wo3 .content::before{height:148px}#abenteuer .content>h1,#wo3 .content>h1{margin-top:-134px;font-size:1.65rem}#abenteuer .content>.lead,#wo3 .content>.lead{min-height:68px}}
-</style></head><body><div class="proto">4.4 · CRAZY FAMILY</div><main>
+</style><style>
+/* 4.5 Crazy Family accents: distinct framing of original watercolor */
+#abenteuer .content::before{background-position:58% 30%;height:178px}
+#wo3 .content::before{background-position:88% 55%;height:178px}
+#abenteuer .nugget-sound-launcher{position:relative;min-height:132px;overflow:hidden;padding-right:34%;background:#f8fbff}
+#abenteuer .nugget-sound-launcher::after{content:"";position:absolute;right:0;top:0;bottom:0;width:37%;background:url("./crazy-family-nugget.png") no-repeat 75% 42%/auto 165%;opacity:.95;pointer-events:none;mask-image:linear-gradient(to right,transparent,#000 28%)}
+#abenteuer .nugget-sound-launcher>div:not(.nugget-sound-art){position:relative;z-index:1}
+#abenteuer .nugget-sound-art{position:relative;z-index:1;width:56px;flex-basis:56px;height:56px;border-radius:12px}
+#abenteuer .nugget-sound-art img{width:46px;height:46px}
+@media(max-width:390px){#abenteuer .nugget-sound-launcher{padding-right:28%;gap:8px}#abenteuer .nugget-sound-launcher::after{width:32%}}
+</style></head><body><div class="proto">4.5 · CRAZY FAMILY</div><main>
 <section id="home" class="screen"><div class="hero"><img src="crazy-family-nugget.png" onerror="this.onerror=null;this.src='nugget-start-v2.jpg'" alt="Crazy Family unterwegs mit unserem Ford Nugget V710"><div class="brand"><strong>UFFBASSE</strong><span>unser Nugget</span><small>REISEN · ENTDECKEN · GEMEINSAM ERLEBEN</small></div></div><div class="homegrid">
 <a class="tile" href="#unterwegs"><svg viewBox="0 0 24 24"><path d="M3 15h18M5 15l2-6h10l2 6M7 18h.01M17 18h.01M6 15v3h12v-3"/></svg><b>UNTERWEGS</b><small>Fahrt, Fahrzeug, Navigation, Tanken, Parken · Wo isser denn, der Nugget?</small></a>
 <a class="tile" href="#platz"><svg viewBox="0 0 24 24"><path d="M3 17h18M5 17V9h9l4 3v5M8 9V6h6v3M18 12h3v5"/></svg><b>AM PLATZ</b><small>Strom, Wasser, Gas, Dach, Markise</small></a>
